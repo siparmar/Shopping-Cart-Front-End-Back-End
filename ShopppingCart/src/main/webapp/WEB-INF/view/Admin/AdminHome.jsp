@@ -7,8 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Admin Home</title>
 </head>
-<body>
+<body style="background-color:#FFDAB9">
 
+<hr>
 	<!--  Add 3 links -->
 	<a href="manage_categories">Manage Categories</a>
 	<br>

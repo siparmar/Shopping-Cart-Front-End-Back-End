@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-<h3><center> Shopping Cart <center></center></h3>
+<body style="background-color:#FFDAB9">
+<h2><center> Shopping Cart <center></center></h2>
 <center>${msg}</center>
 
 <center>${role}</center>

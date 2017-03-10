@@ -9,10 +9,10 @@
 </head>
 <body>
 
-<h2><center>Manage Category</center></h2>	
-<hr>
+<h3><center>Manage Category</center></h3>	
 
-<form action="">
+
+<form action="manage_category_create" method="post">
 
 <input type ="text" name="id">
 <input type ="text" name="name">
@@ -45,7 +45,7 @@
 				<td>${category.id}</td>
 				<td>${category.name}</td>
 				<td>${category.description}</td>
-				<td> <a href="/manage_category_edit"> Edit</a>  |  <a href="/manage_category_delete"> Delete</a></td>
+				<td> <a href="manage_category_edit"> Edit</a>  |  <a href="manage_category_delete/04"> Delete</a></td>
 			</tr>
 				</c:forEach>
 	</table>

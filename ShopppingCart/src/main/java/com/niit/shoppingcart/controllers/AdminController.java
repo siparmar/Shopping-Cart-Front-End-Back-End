@@ -11,7 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.shopppingcart.dao.CategoryDAO;
 import com.niit.shopppingcart.domain.Category;
-
+import com.niit.shopppingcart.domain.Supplier;
+import com.niit.shopppingcart.dao.SupplierDAO;
 
 @Controller
 public class AdminController {
@@ -23,7 +24,12 @@ public class AdminController {
 	
 	@Autowired
 	Category category;
-
+ 
+	@Autowired
+	SupplierDAO supplierDAO;
+	
+	@Autowired
+	Supplier supplier;
 	
 	@RequestMapping("/manage_categories")
 	public ModelAndView manageCategories() {
@@ -47,6 +53,12 @@ public class AdminController {
 		ModelAndView mv = new ModelAndView("/Admin/AdminHome");
 		mv.addObject("isUserClickedSuppliers", "true");
 
+		// get the categories from the db .
+
+		List<Supplier> supplierList = supplierDAO.list();
+		mv.addObject("supplierList",supplierList);
+		mv.addObject("supplier", supplier); //to access category domain object in category.jsp
+		
 		return mv;
 
 	}
